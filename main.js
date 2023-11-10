@@ -1,17 +1,24 @@
-/*let txt = 'hello';
-console.log(txt);
-const h1 = document.querySelector('h1');
-console.log(h1);
-*/
-const section = document.querySelector('section');
-const aricles = section.querySelectorAll('article'); //유사배열
-const btn = section.querySelector('.btn');
-const childrenEl = section.children;
-const parentEl = btn.parentElement.parentElement;
-const grandParentEl = btn.closest('section');
-const prevEl = btn.previousElementSibling;
-const nextEl = btn.nextElementSibling;
-const siblings = btn.parentElement.children;
-//위와 비슷하게 찾는 법(btn형제 다 찾기)const siblings = btn.parentElement.querySelectorAll('li');
+const btns = document.querySelectorAll('.list1 li');
+console.log(btns);
 
-console.log(nextEl);
+/*
+DOM(Document Object Model):Web Api
+:브라우저가 HTML태그를 해석해서 렌더링을 할때 자바스크립트로 하여금 제어할 수 있도록 객체 형태로 만들어주는 API(Application programing interface) ->틀임
+*/
+
+console.dir(btns[0]);
+
+btns[0].addEventListener('click', () => {
+	console.log('엄청중요한 작업');
+});
+btns[0].addEventListener('click', () => {
+	console.log('실수로 연결');
+});
+
+/*
+btns[0].onclick = () => {
+	console.log('button1');
+};
+btns[0].onclick = () => {
+	console.log('button2');
+};*/
